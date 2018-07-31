@@ -9,8 +9,4 @@ public class TimeLogApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TimeLogApplication.class, args);
 	}
-	
-	public String returnString() {
-		return "Hello";
-	}
 }
