@@ -10,5 +10,7 @@ public class TimeLogApplication {
 		SpringApplication.run(TimeLogApplication.class, args);
 	}
 	
-	
+	public String returnString() {
+		return "Hello";
+	}
 }
