@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- <link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<style>
+.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p,
+	.bootstrap-iso form {
+	font-family: Arial, Helvetica, sans-serif,verdana;
+	color: black
+}
+
+.bootstrap-iso form button, .bootstrap-iso form button:hover {
+	color: white !important;
+}
+
+.asteriskField {
+	color: red;
+}
+*
+{
+
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+	<div class="bootstrap-iso">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<form class="form-horizontal" method="post">
+						<div class="holiday-header" align="center">
+							<h1>
+								<b>Holiday</b>
+							</h1>
+						</div>
+						<br>
+						<br>
+						<div class="form-group ">
+							<label class="control-label col-lg-4 requiredField" for="date">
+								Choose Holiday : </label>
+							<div class="col-lg-4">
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"> </i>
+									</div>
+									<input class="form-control" id="date" name="date"
+										placeholder="MM/DD/YYYY" type="text" />
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="form-group ">
+							<label class="control-label col-lg-4" for="description">
+								Description : </label>
+							<div class="col-lg-4">
+								<input class="form-control" id="description" name="description"
+									type="text" />
+							</div>
+						</div>
+						<div class="form-group" align="center">
+							<div class="col-lg-10 col-lg-offset-2">
+								<button class="btn btn-primary " name="submit" type="submit">
+									Save</button>
+							</div>
+						</div>
+
+					</form>
+					<div class="container">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Holidays</th>
+									<th>Description</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							</table>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+</script>
+</body>
+</html>
