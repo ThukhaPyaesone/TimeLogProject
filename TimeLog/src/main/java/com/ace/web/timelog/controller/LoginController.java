@@ -14,4 +14,10 @@ public class LoginController {
 		
 	}
 	
+	@GetMapping("addmember")
+	public String addmemberPage() {
+		return "addmember";
+		
+	}
+	
 }
