@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html >
 <head>
 <title>Create Project Form</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -19,42 +19,43 @@
 <body>
 	<div class="container">
 		<h2>Please fill in the following contents</h2>
-		<div class="row">
-			<div class="labelcol">
-				<label for="teamname">Team Name:</label>
+		<form action="" method="post">
+			<div class="row">
+				<div class="labelcol">
+					<label for="teamname">Team Name:</label>
+				</div>
+				<div class="textcol">
+					<input type="text" id="teamname" class="inputstyle" name="teamname"/>
+				</div>
 			</div>
-			<div class="textcol">
-				<input type="text" id="teamname" class="inputstyle" name="teamname"/>
+			<div class="row">
+				<div class="labelcol">
+					<label for="projectname">Project Name:</label>
+				</div>
+				<div class="textcol">
+					<input type="text" id="projectname" class="inputstyle" name="projectname"/>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="labelcol">
-				<label for="projectname">Project Name:</label>
+			<div class="row">
+				<div class="labelcol">
+					<label for="createdate">Create Date:</label>
+				</div>
+				<div class="textcol" id="selectdate">				
+					<input type="text" id="createdate" class="inputstyle" name="createdate"/>
+					<span><i id="aa" class="fa fa-calendar" style="font-size:24px"></i></span>
+				</div>
 			</div>
-			<div class="textcol">
-				<input type="text" id="projectname" class="inputstyle" name="projectname"/>
+			<div class="row">
+				<div class="buttonplace">
+					<input class="btn-class" type="Submit" name="Submit" value="Submit">
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="labelcol">
-				<label for="createdate">Create Date:</label>
-			</div>
-			<div class="textcol" id="selectdate">				
-				<input type="text" id="createdate" class="inputstyle" name="createdate"/>
-				<span><i id="aa" class="fa fa-calendar" style="font-size:24px"></i></span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="buttonplace">
-				<input class="btn-class" type="Submit" name="Submit" value="Submit">
-			</div>
-		</div>
-
+		</form>
 		<div>
 			<table>
 				<thead class="headerstyle">
-					<td>Team</td>
-					<td>Project</td>
+					<td class="cellstyle">Team</td>
+					<td class="cellstyle">Project</td>
 					<td></td>
 				</thead>
 			</table>
